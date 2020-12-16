@@ -1,0 +1,68 @@
+include menubar
+html
+head
+	title= title
+	
+	
+	link(href='/css/normalize.css', rel='stylesheet')
+	style.
+		td{
+		  border: 2px solid black;
+		  background-color: lightgreen;
+		}
+		.c {
+			font-size: 200%;
+		}
+		.h{
+		  font-size: 200%;
+		}
+		.mR{
+			margin-right:100;
+			font-size: 150%;
+		}
+		
+body
+	form(action="/CDep_Edit" method="post")
+		input(type = 'hidden' name ='_method' value='put')
+		div(class='container')
+			<center><div class'well'></div><center>
+			table
+				thead
+					tr
+						th.h(style='color: blue;') Continuous Deployment
+							br
+							br
+				each item in items
+					tr
+						td
+							div(style = "background-color: #FFFACD;")
+								input(name = "rank" value =item.Rank style = 'display: none;')
+								lable.c=item.Rank
+								lable.c ) 
+								input(type = 'text' name = "question_name" value = item.Question_Name ).c
+							div(style = "background-color: #FAFAD2;")
+								
+								lable.mR A. 
+								input(type = 'text' name = "A" value = item.A).mR
+								br
+								
+								lable.mR B. 
+								input(type = 'text' name = "B" value = item.B).mR
+								br
+								
+								lable.mR C. 
+								input(type = 'text' name = "C" value = item.C).mR
+								br
+								
+								lable.mR D. 
+								input(type = 'text' name = "D" value =  item.D).mR
+								br
+								
+								lable.mR E. 
+								input(type = 'text' name = "E" value = item.E).mR
+								
+								select(name = 'answer' style = 'display: none;')
+									option --
+				end
+			br
+			button(style=  'width: 120; background-color: lightblue;') Submit >>

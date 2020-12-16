@@ -1,0 +1,108 @@
+include menubar
+html
+	head
+		title Report Card
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(href='/css/normalize.css', rel='stylesheet')
+		link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+
+		style.
+			* {
+			  box-sizing: border-box;
+			}
+
+			/* Create two equal columns that floats next to each other */
+			.column {
+			  float: left;
+			  width: 50%;
+			  height: 650px; /* Should be removed. Only for demonstration */
+			  column-gap: 40px;
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			  
+			}
+			.left, .right {
+			  width: 25%;
+			}
+			.inline {
+			  display: inline;
+			}
+	
+
+	body
+		div(style='border-style: solid; margin-right: 150px; margin-left: 150px; padding-bottom: 25px;')
+			div(style='text-align: center;')
+				h2 DevOps Maturity Level Report Card
+				img(src='report_1.png')
+			div 
+				p ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			div(style='padding-left: 25px;')
+				p Please find below links to resources that you may find useful for each of these areas.
+			div
+				div.row(style="padding-left: 25px; padding-right: 25px;")
+					div.column(style="border-style: groove; border-color: #4169E1; background-color:#4169E1;")
+						div(style = 'background-color: #4169E1; height: 50; text-align: center')
+							h2 Automation
+						div(style = 'background-color: white; height: 200; font-size:18; ')
+							lable<b><i> Maturity Assessment Level: 
+							lable=Total_level 
+							</i></b>
+							br
+							lable Your Score : 
+							lable=Total
+							p=Total_cmt
+							p
+						div(style = 'background-color: white; height: 300;')
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;") 
+								<p><a style="text-decoration:none" class="list-group-item" href="https://www.ansible.com/resources/ebooks/get-started-with-red-hat-ansible-tower"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Get started with Red Hat Ansible Tower </p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" class="list-group-item" href="https://www.ansible.com/resources/whitepapers"><i class="fa fa-file-text" aria-hidden="true"></i>&nbsp; Various Ansible Whitepapers </p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" class="list-group-item" href="https://www.linkedin.com/pulse/devops-dont-create-haystack-chris-baynham-hughes/"><i class="fa fa-rss-square" aria-hidden="true"></i>&nbsp; Various Ansible Whitepapers </p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href="https://www.linkedin.com/pulse/devops-dont-create-haystack-chris-baynham-hughes/"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;  Putting The Dev Into DevOps: Why Your Developers Should Write Terraform Too by Luke Kysow  </p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://atos.net/wp-content/uploads/2018/09/atos-wp-datacenter-automation.pdf'><i class="fa fa-file-text" aria-hidden="true"></i>   Data Center Automation (Atos Whitepaper) </a></p>
+							
+						div(style="font-size:20; background-color: #4169E1; padding-left: 15px; padding-right: 15px; text-align: center; font-weight: bold;")
+							p
+							p.inline Your Score: 
+							p.inline=Total
+					
+					div.column(style="border-style: groove; border-color: #4169E1; background-color:#4169E1;")
+						div(style = 'background-color: #4169E1; height: 50; text-align: center;')
+							h2 Org Structure, Culture and Incentives
+						div(style = 'background-color: white; height: 200; font-size:18;')
+							lable Org Structure, Culture and Incentives are critical for DevOps success within an organisation, but they are also the hardest/most disruptive elements to change and get right.
+							
+						div(style = 'background-color: white; height: 300;')
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://www.mountaingoatsoftware.com/blog/the-benefits-of-feature-teams'><i class="fa fa-rss-square" aria-hidden="true"></i> The Benefits of Feature Teams by Mike Cohn </a></p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://vimeo.com/85490944'><i class="fa fa-video-camera" aria-hidden="true"></i> Spotify Engineering Culture </a></p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://opensource.com/open-organization/resources/field-guide'><i class="fa fa-book fa-fw" aria-hidden="true"></i> The Open Organization Field Guide </a></p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://management30.com/'><i class="fa fa-link" aria-hidden="true"></i>  Management 3.0 </a></p>
+							
+							div(style="border-style: ridge; background-color:white; border-color: #FFF5EE; padding-left: 15px; padding-right: 15px;")
+								<p><a style="text-decoration:none" href='https://management30.com/'><i class="fa fa-video-camera" aria-hidden="true"></i>  MDevOpsChat: "Giving a Damn" interview with Pawel Brodzinski (00:34) </a></p>
+							
+						div(style="font-size:20; background-color: #4169E1; padding-left: 15px; padding-right: 15px; text-align: center; font-weight: bold;")
+							p
+							p.inline Your Score: 
+							p.inline=Total 
+					
+				div.row

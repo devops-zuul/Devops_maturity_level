@@ -1,0 +1,135 @@
+include menubar
+html
+	head
+		title DevOps Maturity Assessment
+		link(href='/css/normalize.css', rel='stylesheet')
+		style.
+			
+			.c {
+				background-color: #F0FFFF;
+			}
+			.h{
+			  font-size: 200%;
+			}
+			.f {
+			  font-family: "Times New Roman", Times, serif;
+			}
+			.text{
+			  margin: auto;
+			  width: 20%;
+			  padding: 10px;
+			}
+			.center {
+			  
+			  margin: auto;
+			  width: 60%;
+			  border: 3px solid black;
+			  padding: 10px;
+			}
+			
+			.bt{
+				width: 200;
+				font-size: 115%;
+				background-color: #B0C4DE; 
+				
+			}
+			.bt1{
+				width: 200;
+				font-size: 115%;
+				background-color: lightgreen;
+				text-align:center;
+				
+			}
+			
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		
+		script.
+			$(document).ready(function(){
+				$("#Insert").click(function(){
+					$('#insert').show();
+					$('#delete').hide();
+					$('#edit').hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#Delete").click(function(){
+					$('#delete').show();
+					$('#edit').hide();
+					$('#insert').hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#Edit").click(function(){
+					$('#edit').show();
+					$('#delete').hide();
+					$('#insert').hide();
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#Insert").dblclick(function(){
+					$('#insert').hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#Delete").dblclick(function(){
+					$('#delete').hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#Edit").dblclick(function(){
+					$('#edit').hide();
+				});
+			});
+body
+	br
+	br
+	br
+	div.center.c
+		
+		table(style = 'background-color = #9370DB;')
+			
+			tr
+				th.h.f Improve Your DevOps Capability
+				br
+			tr
+				td
+					br
+					p(style = 'text-align: center;') Here you need to select an option to perform an operation to do an ction on quetion set
+		div.text.f
+			br
+			button.bt#Insert(style = "background-color: #B0C4DE") Insert Question 
+			div#insert(style = 'display: none;')
+				<a href="http://localhost:8000/CM_insert_questions"><button class = "bt1"> Configuration Management </button></a>
+				<a href="http://localhost:8000/CI_insert_questions"><button class = "bt1"> Continuous Integration </button></a>
+				<a href="http://localhost:8000/AutoM_testing"><button class = "bt1"> Automated Testing </button></a>
+				<a href="http://localhost:8000/IaaS_insert_questions"><button class = "bt1"> IaaS </button></a>
+				<a href="http://localhost:8000/CDelivery_insert_questions"><button class = "bt1"> Continuous Delivery </button></a>
+				<a href="http://localhost:8000/CDeploy_insert_questions"><button class = "bt1"> Continuous Deployment </button></a>
+				<a href="http://localhost:8000/CMonitor_insert_questions"><button class = "bt1"> Continuous Monitoring </button></a>
+			p
+			button.bt#Delete(style = "background-color: #B0C4DE") Delete Question 
+			div#delete(style = 'display: none;')
+				<a href="http://localhost:8000/Conf_Manage_Delete_questions"><button class = "bt1"> Configuration Management </button></a>
+				<a href="http://localhost:8000/CI_delete_questions"><button class = "bt1"> Continuous Integration </button></a>
+				<a href="http://localhost:8000/ATM_delete_questions"><button class = "bt1"> Automated Testing </button></a>
+				<a href="http://localhost:8000/IaaS_delete_questions"><button class = "bt1"> IaaS </button></a>
+				<a href="http://localhost:8000/CDel_delete_questions"><button class = "bt1"> Continuous Delivery </button></a>
+				<a href="http://localhost:8000/CDep_delete_questions"><button class = "bt1"> Continuous Deployment </button></a>
+				<a href="http://localhost:8000/CMon_delete_questions"><button class = "bt1"> Continuous Monitoring </button></a>
+			p
+			button.bt#Edit(style = "background-color: #B0C4DE") Edit Question 
+			div#edit(style = 'display: none')
+				<a href="http://localhost:8000/Conf_Manage_Edit_questions"><button class = "bt1"> Configuration Management </button></a>
+				<a href="http://localhost:8000/CI_Edit_questions"><button class = "bt1"> Continuous Integration </button></a>
+				<a href="http://localhost:8000/ATM_Edit_questions"><button class = "bt1"> Automated Testing </button></a>
+				<a href="http://localhost:8000/IaaS_Edit_questions"><button class = "bt1"> IaaS </button></a>
+				<a href="http://localhost:8000/CDel_Edit_questions"><button class = "bt1"> Continuous Delivery </button></a>
+				<a href="http://localhost:8000/CDep_Edit_questions"><button class = "bt1"> Continuous Deployment </button></a>
+				<a href="http://localhost:8000/CMon_Edit_questions"><button class = "bt1"> Continuous Monitoring </button></a>
+			
+			
+					
+					
+					
+		

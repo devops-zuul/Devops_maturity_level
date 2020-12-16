@@ -1,0 +1,29 @@
+{
+  "name": "devops_matutity_level",
+  "version": "1.0.0",
+  "description": "This will evaluating client or project maturity for devops, and on that bases will find to improvement area ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Kulkarni",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.4",
+    "connect-redis": "^5.0.0",
+    "d3": "^6.2.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "express-generator": "^4.16.0",
+    "express-session": "^1.17.1",
+    "jade": "^1.11.0",
+    "jquery": "^3.5.1",
+    "jsde": "0.0.4",
+    "mongoose": "^5.11.8",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.1"
+  }
+}

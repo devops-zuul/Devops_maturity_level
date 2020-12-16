@@ -1,0 +1,86 @@
+include menubar
+html
+	head
+		link(href='/css/normalize.css', rel='stylesheet')
+		style.
+			.signup-form {
+				width: 300px;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+			.signup-form h1 {
+				text-align: center;
+				color: #4d4d4d;
+				font-size: 24px;
+				padding: 20px 0 20px 0;
+			}
+			.signup-form input[type="number"],
+			.signup-form input[type="email"],
+			.signup-form input[type="password"],
+			.signup-form input[type="text"]{
+				width: 100%;
+				padding: 15px;
+				border: 1px solid #dddddd;
+				margin-bottom: 15px;
+				box-sizing:border-box;
+			}		
+			.signup-form input[type="submit"] {
+				width: 100%;
+				padding: 15px;
+				background-color: #535b63;
+				border: 0;
+				box-sizing: border-box;
+				cursor: pointer;
+				font-weight: bold;
+				color: #ffffff;
+			}
+			.center {
+			  text-align: center;
+			}
+	body
+		
+		div
+			form(action="/SignUp" method="post")
+				input(type = 'hidden' name ='_method' value='put')
+				h2.center Sign Up for the DevOps Maturity Assessment
+
+				table#signn.signup-form 
+					tr
+						th 
+						th
+					tr
+						td 
+							|First Name 	  : 
+							input(type = 'text' name ='fname' placeholder ='first name' value=fname)
+							br
+							br
+							|Last Name :  
+							input(type = 'text' name ='lname' placeholder = 'Last name' value=lname)
+							br
+							br
+							|Organization Name :  
+							input(type = 'text' name ='Oname' placeholder = 'Organization name' value=Oname)
+							br
+							br
+							|Email : 
+							input(type = 'email' name = 'email' placeholder = 'example@--.com' value=Ename)
+							br
+					tr
+						td
+							br
+							|Contact Number : 
+							input(type = 'number' name = 'contact' placeholder = 'mobile number' value=contact)
+							br
+							br
+							|Username
+							input(type = 'text' name = 'uname' placeholder = 'uname')
+							br
+							br
+							|Set Password
+							input(type = 'password' name ='password' placeholder = 'password')
+							br
+							br
+							a(href='http://localhost:8000/Login')#sub <input type ='submit' value = 'SignUp'> 
+			
+	
+							

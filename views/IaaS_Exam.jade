@@ -1,0 +1,72 @@
+include menubar
+html
+head
+	title= title
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+	script.
+		$(document).ready(function(){
+			$("#prev").click(function(){
+				window.history.back();
+			});
+		});
+	link(href='/css/normalize.css', rel='stylesheet')
+	style.
+		td{
+		  border: 2px solid black;
+		  background-color: lightgreen;
+		}
+		.c {
+			font-size: 150%;
+		}
+		.h{
+		  font-size: 200%;
+		}
+		.mR{
+			margin-right:100;
+		}
+		
+body
+	form(action="/IaaS_Exam_Sub" method="post")
+		input(type = 'hidden' name ='_method' value='put')
+		div(class='container')
+			<center><div class'well'></div><center>
+			table
+				thead
+					tr
+						th.h(style='color: blue;') IaaS
+							br
+							br
+				each item in items
+					tr
+						td
+							div(style = "background-color: #FFFACD;")
+								label.c=item.Rank
+								lable.c ) 
+								lable.c= item.Question_Name 
+							div(style = "background-color: #FAFAD2;")
+								input(type = 'checkbox' name = "answer" value = "A")= item.A
+								label.mR(for = "A")= item.A
+								br
+								
+								input(type = 'checkbox' name = "answer" value = "B")= item.B
+								label.mR(for = "B")= item.B
+								br
+								
+								input(type = 'checkbox' name = "answer" value = "C")= item.C
+								label.mR(for = "C")= item.C
+								br
+								
+								input(type = 'checkbox' name = "answer" value = "D")= item.D
+								label.mR(for = "D")= item.D	
+								br
+								
+								input(type = 'checkbox' name = "answer" value = "E")= item.E
+								label.mR(for = "E")= item.E	
+								br
+								select(name = 'answer' style = 'display: none;')
+									option --
+			br
+			button(style=  'width: 100; background-color: lightblue;') Next >>
+	div(class='container')
+		<center><div class'well'></div><center>
+		button#prev(style=  'width: 100; background-color: lightblue;') << Previous	

@@ -1,0 +1,56 @@
+include menubar
+html
+head
+	link(href='/css/normalize.css', rel='stylesheet')
+	style.
+		.table {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.h2 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.table input[type="password"],
+		.table input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.table input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+body
+		
+			
+			table.table
+				h2.h2 Login to the DevOps Maturity level Assessment
+				tr
+					form(action="/Login" method="post")
+						input(type = 'hidden' name ='_method' value='put')
+						td 
+							|Username 	  : 
+							input(type = 'text' name = 'uname' placeholder = 'user name')
+							br
+							br
+							|Password : 
+							input(type = 'password' name ='password' placeholder = 'password')
+							br
+							br
+							input(type = 'submit' value ='LogIn')
+			table.table
+				tr
+					td
+						<button><a style="text-decoration:none" href="https://www.linkedin.com/pulse/devops-dont-create-haystack-chris-baynham-hughes/"><i class="fa fa-rss-square" aria-hidden="true"></i> Various Ansible Whitepapers </button>		

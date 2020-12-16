@@ -1,0 +1,53 @@
+include menubar
+html
+	head
+		title DevOps Maturity Assessment
+		link(href='/css/normalize.css', rel='stylesheet')
+		style.
+			
+			.c {
+				font-size: 125%;
+				background-color: #F0FFFF;
+			}
+			.h{
+			  font-size: 200%;
+			}
+			.f {
+			  font-family: "Times New Roman", Times, serif;
+			}
+			.text{
+			  margin: auto;
+			  width: 60%;
+			  padding: 10px;
+			}
+			.center {
+			  margin: auto;
+			  width: 60%;
+			  border: 3px solid black;
+			  padding: 10px;
+			}
+			.bt{
+				width: 100;
+				font-size: 125%;
+				background-color: #B0C4DE; 
+				font-weight: bold;
+				font-family: "Times New Roman", Times, serif;
+			}
+body
+
+	div.text
+		
+		table
+			
+			tr
+				th.h.f Introduction
+				br
+				br
+			tr
+				td.center.c.f
+					p The goal of this questionaire is to help you assess the DevOps maturity of your team and to help you understand what might be the appropriate next steps for you on your DevOps journey.
+					p These questions are intended to be completed for one team (typically reporting to the same line manager and usually consisting of between 5 and 15 people).
+					
+				
+	div(style = 'text-align: center; ')
+		<a href="http://localhost:8000/signin_signup"><button class = "bt" style = "background-color: #B0C4DE"> Next </button></a>

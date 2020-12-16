@@ -1,0 +1,88 @@
+include menubar
+html
+	head
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		
+		script.
+			
+		
+		link(href='/css/normalize.css', rel='stylesheet')
+		style.
+			.Question-style {
+				width: 300px;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+			.Question-style h1 {
+				text-align: center;
+				color: #4d4d4d;
+				font-size: 24px;
+				padding: 20px 0 20px 0;
+			}
+			
+			.Question-style input[type="text"] {
+				width: 100%;
+				padding: 15px;
+				border: 1px solid #dddddd;
+				margin-bottom: 15px;
+				box-sizing:border-box;
+			}
+			
+			
+			.Question-style input[type="submit"] {
+				width: 100%;
+				padding: 15px;
+				background-color: #535b63;
+				border: 0;
+				box-sizing: border-box;
+				cursor: pointer;
+				font-weight: bold;
+				color: #ffffff;
+			}
+			
+			
+	body
+		
+		div#signn.Question-style 
+			form(action="/IaaS" method="post")
+				input(type = 'hidden' name ='_method' value='put')
+				h2 IaaS
+
+				table
+					tr
+						td 
+							|Rank Number : 
+							input(type = 'text' name ='rank_no' placeholder ='rank Number' )
+							br
+							br
+							|Question Name	  : 
+							input(type = 'text' name ='question_name' placeholder ='Question Name' )
+							br
+							br
+							|Option  A:  
+							input(type = 'text' name ='A' placeholder = 'A')
+							br
+							br
+							|Option  B: 
+							input(type = 'text' name = 'B' placeholder = 'B')
+							br
+							br
+							|Option  C : 
+							input(type = 'text' name = 'C' placeholder = 'C')
+							br
+							br
+							|Option  D :
+							input(type = 'text' name = 'D' placeholder = 'D')
+							br
+							br
+							|Option  E :
+							input(type = 'text' name ='E' placeholder = 'E')
+							br
+							br
+							a(href = 'http://localhost:8000/CI_insert_questions') <input type = 'submit' value = 'NEXT ->'>
+							br
+							br
+							<input type ='submit' value = 'submit'> 
+			
+	
+							

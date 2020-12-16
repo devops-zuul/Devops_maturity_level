@@ -1,0 +1,71 @@
+include menubar
+html
+head
+	title= title
+	
+	
+	link(href='/css/normalize.css', rel='stylesheet')
+	style.
+		td{
+		  border: 2px solid black;
+		  background-color: lightgreen;
+		}
+		.c {
+			font-size: 200%;
+		}
+		.h{
+		  font-size: 200%;
+		}
+		.mR{
+			margin-right:50;
+			font-size: 120%;
+		}
+		
+body
+	form(action="/CI_delete" method="post")
+		input(type = 'hidden' name ='_method' value='put')
+		div(class='container')
+			<center><div class'well'></div><center>
+			table
+				thead
+					tr
+						th.h(style='color: blue;') Configuration Management
+							br
+							br
+				each item in items
+					tr
+						td
+							div(style = "background-color: #FFFACD;")
+								input(type = 'checkbox' name = 'select' value=item.Rank)
+								
+								lable.c=item.Rank
+								lable.c ) 
+								lable.mR= item.Question_Name 
+							div(style = "background-color: #FAFAD2;")
+								
+								lable.mR A. 
+								lable.mR=item.A
+								br
+								
+								lable.mR B. 
+								lable.mR=item.B
+								br
+								
+								lable.mR C. 
+								lable.mR=item.C
+								br
+								
+								lable.mR D. 
+								lable.mR=item.D
+								br
+								
+								lable.mR E. 
+								lable.mR=item.E
+								
+								
+				end
+			br
+			button(style=  'width: 120; background-color: lightblue;') View Result >>
+	div(class='container')
+		<center><div class'well'></div><center>
+		button#prev(style=  'width: 100; background-color: lightblue;') << Previous	
